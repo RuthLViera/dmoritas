@@ -1,0 +1,92 @@
+*{ 
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+header{
+    background-image: url(../Imagenes/Logo\ Fondo\ Transparente.png);
+    background-repeat: no-repeat;
+    background-size: 270px;
+    background-color: rgb(37, 161, 151);
+    height: 14vh;
+    background-position: center;
+    position: initial;
+    z-index: 100;
+    padding-bottom: 2px;padding-right: 4px;padding-left: 4px;padding-top: 2px;
+    grid-template-columns: auto;
+}
+
+.navegador{
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgb(206, 160, 87);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navegador:hover{
+    color: rgb(99, 66, 23);
+}
+
+nav{
+    background: rgb(37, 161, 151);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.animacion{
+
+    text-align: center;
+    font-size: 10rem ;
+    letter-spacing: -0.06em;
+    text-decoration-line: none;
+    color: #fff;
+
+}
+
+span::before{
+    background: linear-gradient(90deg, var(--start-color), var(--end-color));
+    content: var(--content);
+    position: absolute;
+    inset: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated 9s infinite;
+    animation-delay: var(--delay);
+}
+@keyframes animated{
+    0%, 50%, 100%{
+        opacity: 1;
+    }
+        3.333%, 83.333%{
+        opacity: 0;
+    }
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 1;
+    background-color: rgb(37, 161, 151);
+    width: 100%;
+    margin: 0%;
+    text-align: center;
+    color: rgb(221, 176, 116);
+    grid-template-columns: auto;
+    font-size: 1.5rem;
+}
+footer a {
+    color: rgb(221, 176, 116);
+    font-size: 1rem;
+}

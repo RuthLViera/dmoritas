@@ -1,0 +1,90 @@
+*{ 
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+header{
+    background-image: url(../Imagenes/Logo\ Fondo\ Transparente.png);
+    background-repeat: no-repeat;
+    background-size: 40vh;
+    background-color: rgb(37, 161, 151);
+    height: 14vh;
+    width: auto;
+    background-position: center;
+    position: initial;
+    z-index: 1;
+    padding-bottom: 2px;padding-right: 4px;padding-left: 4px;padding-top: 2px;
+    grid-template-columns: auto;
+
+}
+
+.navegador{
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgb(206, 160, 87);
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-decoration-line: none;
+}
+
+.navegador:hover{
+    color: rgb(99, 66, 23);
+}
+
+nav{
+    background: rgb(37, 161, 151);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.galeria{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+    grid-template-rows: 30rem;
+    text-align: center;
+    justify-content: flex-end;
+    background-position: center;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    align-items: center;
+    color: rgb(221, 176, 116);
+    text-decoration-line: none;
+}
+.productos{
+    text-decoration-line: none;
+    color: rgb(221, 176, 116);
+}
+.productos:hover{
+    color: rgb(99, 66, 23);
+
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 1;
+    background-color: rgb(37, 161, 151);
+    width: 100%;
+    margin: 0%;
+    text-align: center;
+    color: rgb(221, 176, 116);
+    grid-template-columns: auto;
+    font-size: 1.5rem;
+}
+
+footer a {
+    color: rgb(221, 176, 116);
+    font-size: 1rem;
+}
+
