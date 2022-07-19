@@ -1,10 +1,10 @@
 import pymysql
 
 def obtener_conexion():
-    return pymysql.connect(host='localhost',
-                                user='root',
-                                password='',
-                                db='demoritas')
+    return pymysql.connect(host='sql10.freesqldatabase.com',
+                                user='sql10507526',
+                                password='njH1Njd5Pc',
+                                db='sql10507526')
 
 def insertar_producto(codigo, descripcion, imagen, categoria, precio, cantidad):
     conexion = obtener_conexion()
