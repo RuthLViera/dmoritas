@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    background-image: url(../Imagenes/Logo\ Fondo\ Transparente.png);
+    background-image: url(../imagenes/Logo\ Fondo\ Transparente.png);
     background-repeat: no-repeat;
     background-size: 270px;
     background-color: rgb(37, 161, 151);
@@ -57,7 +57,7 @@ nav{
 }
 
 #accesorios{
-background-image: url(../Imagenes/bebe1.jpg);
+background-image: url(../imagenes/bebe1.jpg);
 background-repeat: no-repeat;
 background-size: 100%;
 background-position: center;
@@ -67,7 +67,7 @@ z-index: -1;
  }
 
 #ropa{
-    background-image: url(../Imagenes/bebe2.jpg);
+    background-image: url(../imagenes/bebe2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -136,5 +136,84 @@ footer{
 footer a {
     color: rgb(221, 176, 116);
     font-size: 1rem;
+}
+
+.button {
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 12px 8px 12px 8px;
+    min-width: 100px;
+    border: 0px;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+    width: 100%;
+}
+
+.button:focus, .button.focus {
+    outline: 0;
+}
+  
+.button-round-1 {
+    border-radius: 8px;
+}
+
+
+.button-primary {
+    background: #3498db;
+    color: #ffffff;
+}
+  
+.button-primary:hover {
+    background: #2980b9;
+    color: #ffffff;
+}
+
+.button-success {
+    background: #2ecc71;
+    color: #ffffff;
+}
+
+.button-success:hover {
+    background: #27ae60;
+    color: #ffffff;
+}
+
+.button-warning {
+    background: #f1c40f;
+    color: #ffffff;
+}
+
+.button-warning:hover {
+    background: #f39c12;
+    color: #ffffff;
+}
+
+.button-danger {
+    background: #e74c3c;
+    color: #ffffff;
+}
+
+.button-danger:hover {
+    background: #c0392b;
+    color: #ffffff;
+}
+  
+.is-size-3{
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.section{
+    background: #fff;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
 }
 

@@ -9,16 +9,18 @@ body{
 }
 
 header{
-    background-image: url(../Imagenes/Logo\ Fondo\ Transparente.png);
+    background-image: url(../imagenes/Logo\ Fondo\ Transparente.png);
     background-repeat: no-repeat;
-    background-size: 270px;
+    background-size: 40vh;
     background-color: rgb(37, 161, 151);
     height: 14vh;
+    width: auto;
     background-position: center;
     position: initial;
-    z-index: 100;
+    z-index: 1;
     padding-bottom: 2px;padding-right: 4px;padding-left: 4px;padding-top: 2px;
     grid-template-columns: auto;
+
 }
 
 .navegador{
@@ -27,6 +29,7 @@ header{
     color: rgb(206, 160, 87);
     text-decoration: none;
     font-size: 1.5rem;
+    text-decoration-line: none;
 }
 
 .navegador:hover{
@@ -40,36 +43,29 @@ nav{
     justify-content: flex-end;
 }
 
-
-.animacion{
-
+.galeria{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+    grid-template-rows: 30rem;
     text-align: center;
-    font-size: 10rem ;
-    letter-spacing: -0.06em;
+    justify-content: flex-end;
+    background-position: center;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    align-items: center;
+    color: rgb(221, 176, 116);
     text-decoration-line: none;
-    color: #fff;
+}
+.productos{
+    text-decoration-line: none;
+    color: rgb(221, 176, 116);
+}
+.productos:hover{
+    color: rgb(99, 66, 23);
 
 }
-
-span::before{
-    background: linear-gradient(90deg, var(--start-color), var(--end-color));
-    content: var(--content);
-    position: absolute;
-    inset: 0;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animated 9s infinite;
-    animation-delay: var(--delay);
-}
-@keyframes animated{
-    0%, 50%, 100%{
-        opacity: 1;
-    }
-        3.333%, 83.333%{
-        opacity: 0;
-    }
-}
-
 
 footer{
     position: fixed;
@@ -86,7 +82,9 @@ footer{
     grid-template-columns: auto;
     font-size: 1.5rem;
 }
+
 footer a {
     color: rgb(221, 176, 116);
     font-size: 1rem;
 }
+

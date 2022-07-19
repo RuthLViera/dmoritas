@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Moritas</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imagenes/Logo mini.png') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contactanos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="https://kit.fontawesome.com/6712d5fba4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--  <div class="principal">-->
+<header></header>
+<nav class="navegacion">
+    <a class="navegador" href="{{url_for('home')}}">Home</a>
+    <a class="navegador" href="{{url_for('accesorios')}}">Accesorios</a>
+    <a class="navegador" href="{{url_for('ropa')}}">Ropa</a>
+    <a class="navegador" href="{{url_for('contactanos')}}">Contáctanos</a>
+    <a class="navegador" href="{{url_for('productos')}}">Inventario</a>
+</nav>
+    {%block contenido %} {% endblock %}
+    <footer>
+        <p>D'Moritas @ 2022.Todos los derechos reservados.  
+        <a href="https://www.instagram.com/" target="_blank">    <i class="fab fa-instagram fa-fw fa-2x fa-beat-fade" style="color: var(--example-color); --fa-animation-duration:2s;"></i></a>&nbsp;
+        <a href="https://www.facebook.com/" target="_blank">    <i class="fab fa-facebook fa-fw fa-2x fa-beat-fade" style="color: var(--example-color); --fa-animation-duration:2s;"></i></a>   
+        </p>
+    </footer>
+</body>
+
+</html>

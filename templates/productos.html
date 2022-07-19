@@ -1,0 +1,48 @@
+{% extends "maestra.html" %}
+{% block titulo %} Productos {% endblock %}
+{% block contenido %}
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="is-size-3">Productos</h3>
+            <a href="{{url_for('formulario_agregar_producto')}}" class="button button-success button-round-1">Agregar Producto</a><br><br><br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Categoria</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th colspan="2" style="text-align: center;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in Productos %}
+                    <tr>
+                        <td>{{producto[1]}}</td>
+                        <td>{{producto[2]}}</td>
+                        <td>{{producto[3]}}</td>
+                        <td>{{producto[4]}}</td>
+                        <td>{{producto[5]}}</td>
+                        <td>{{producto[6]}}</td>
+                        <td>
+                            {# Pasar el id (lo que hay en producto[0] #}
+                            <a href="{{url_for('editar_producto', id=producto[0])}}"><button class="button button-primary button-round-1">Editar</button></a> 
+                        </td>
+                        <td>
+                            <form action="{{url_for('eliminar_producto')}}" method="POST">
+                                <input type="hidden" name="id" value="{{producto[0]}}">
+                                <button class="button button-danger button-round-1">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

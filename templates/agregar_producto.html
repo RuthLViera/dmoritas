@@ -1,0 +1,38 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+Agregar producto
+{% endblock %}
+{% block contenido %}
+<section class="section">
+    <div class="columns">
+        <div class="column is-one-third">
+            <h3 class="is-size-3">Agregar producto</h3>
+            <form action="{{url_for('guardar_producto')}}" method="post">
+                <table class="table">
+                    <thead>
+                        <th><label for="codigo">Codigo:</label></th>
+                        <th><label for="descripcion">Descripción:</label></th>
+                        <th><label for="imagen">Imagen:</label></th>
+                        <th><label for="categoria">Categoria:</label></th>
+                        <th><label for="precio">Precio:</label></th>
+                        <th><label for="cantidad">Cantidad:</label></th>
+                        <th colspan="2">Acciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="codigo" id="codigo" required></td>
+                            <td><input type="text" name="descripcion" id="descripcion" required></td>
+                            <td><input type="text" name="imagen" id="imagen" required></td>
+                            <td><input type="text" name="categoria" id="categoria" required></td>
+                            <td><input type="text" name="precio" id="precio" required></td>
+                            <td><input type="text" name="cantidad" id="cantidad" required></td>
+                            <td><button type="submit" class="button button-primary button-round-1">Guardar</button></td>
+                            <td><a href="{{url_for('productos')}}" class="button button-warning button-round-1">Cancelar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
