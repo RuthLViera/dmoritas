@@ -8,22 +8,30 @@ Editar Producto
         <div class="column">
             <h3 class="is-size-3">Editar producto</h3>
             <form action="{{url_for('actualizar_producto')}}" method="post">
-                {# Enviar el id en un campo oculto #}
-                <input type="hidden" name="id" id="id" value="{{producto[0]}}">                
-                <label for="codigo">Codigo:</label>
-                <input value="{{producto[1]}}" required type="text" class="input" placeholder="Codigo" name="codigo" id="codigo">
-                <label for="descripcion">Descripción:</label>
-                <input value="{{producto[2]}}" required type="text" class="input" placeholder="Descripción" name="descripcion" id="descripcion">
-                <label for="imagen">Imagen:</label>
-                <input value="{{producto[3]}}" required type="text" class="input" placeholder="Imagen" name="imagen" id="imagen">
-                <label for="categoria">Categoria:</label>
-                <input value="{{producto[4]}}" required type="text" class="input" placeholder="Categoria" name="categoria" id="categoria">
-                <label for="precio">Precio:</label>
-                <input value="{{producto[5]}}" required type="number" class="input" placeholder="Precio" name="precio" id="precio">
-                <label for="cantidad">Cantidad:</label>
-                <input value="{{producto[6]}}" required type="number" class="input" placeholder="Cantidad" name="cantidad" id="cantidad">
-                <button type="submit" class="button is-success mt-2">Guardar</button>
-                <a href="{{url_for('productos')}}" class="button is-primary mt-2">Volver</a>
+                <table class="table">
+                    <thead>
+                        <th><label for="codigo">Codigo:</label></th>
+                        <th><label for="descripcion">Descripción:</label></th>
+                        <th><label for="imagen">Imagen:</label></th>
+                        <th><label for="categoria">Categoria:</label></th>
+                        <th><label for="precio">Precio:</label></th>
+                        <th><label for="cantidad">Cantidad:</label></th>
+                        <th colspan="2">Acciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <input type="hidden" name="id" id="id" value="{{producto[0]}}">                
+                            <td><input value="{{producto[1]}}" type="text" name="codigo" id="codigo" required></td>
+                            <td><input value="{{producto[2]}}" type="text" name="descripcion" id="descripcion" required></td>
+                            <td><input value="{{producto[3]}}" type="text" name="imagen" id="imagen" required></td>
+                            <td><input value="{{producto[4]}}" type="text" name="categoria" id="categoria" required></td>
+                            <td><input value="{{producto[5]}}" type="text" name="precio" id="precio" required></td>
+                            <td><input value="{{producto[6]}}" type="text" name="cantidad" id="cantidad" required></td>
+                            <td><button type="submit" class="button button-primary button-round-1">Guardar</button></td>
+                            <td><a href="{{url_for('productos')}}" class="button button-warning button-round-1">Cancelar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </form>
         </div>
     </div>

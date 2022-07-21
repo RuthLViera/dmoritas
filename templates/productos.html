@@ -10,9 +10,9 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>Imagen</th>
                         <th>Codigo</th>
                         <th>Descripción</th>
-                        <th>Imagen</th>
                         <th>Categoria</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
@@ -22,9 +22,9 @@
                 <tbody>
                     {% for producto in Productos %}
                     <tr>
+                        <td><img src="{{ url_for('static', filename='imagenes/'+producto[3]) }}" alt="{{producto[3]}}"width="70px" height="48px" ></td>
                         <td>{{producto[1]}}</td>
                         <td>{{producto[2]}}</td>
-                        <td>{{producto[3]}}</td>
                         <td>{{producto[4]}}</td>
                         <td>{{producto[5]}}</td>
                         <td>{{producto[6]}}</td>
